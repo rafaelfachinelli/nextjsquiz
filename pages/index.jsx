@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useRouter } from 'next/router';
 
 import db from '../db.json';
 
@@ -8,20 +9,14 @@ import Footer from '../src/components/Footer';
 import QuizLogo from '../src/components/QuizLogo';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  margin: auto 1%;
-  padding-top: 45px;
-
-  @media screen and (max-width: 500px) {
-    margin: auto;
-    padding: 15px;
-  }
-`;
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
+import QuizContainer from '../src/components/QuizContainer';
 
 export default function Home() {
+  const router = useRouter();
+  const [name, setName] = useState('');
+
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
@@ -31,7 +26,24 @@ export default function Home() {
             <h1>PokéQuiz</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Prove que você é um mestre Pokémon.</p>
+            <form onSubmit={
+              (e) => {
+                e.preventDefault();
+                router.push(`/quiz?name=${name}`);
+              }
+            }
+            >
+              <Input
+                name="nomeDoUsuario"
+                type="text"
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Digite seu nome"
+                value={name}
+              />
+              <Button type="submit" disabled={name.length === 0}>
+                Jogar
+              </Button>
+            </form>
           </Widget.Content>
         </Widget>
 
