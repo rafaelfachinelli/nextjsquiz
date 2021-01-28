@@ -23,7 +23,7 @@ export default function Home() {
         <QuizLogo />
         <Widget>
           <Widget.Header>
-            <h1>PokéQuiz</h1>
+            <h1>007: Quiz</h1>
           </Widget.Header>
           <Widget.Content>
             <form onSubmit={

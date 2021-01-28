@@ -10,7 +10,9 @@ import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
 import LoadingWidget from '../src/components/LoadingWidget';
 
-function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit }) {
+function QuestionWidget({
+  question, totalQuestions, questionIndex, onSubmit,
+}) {
   const questionId = `question__${questionIndex}`;
 
   return (
@@ -60,10 +62,10 @@ function QuestionWidget({ question, totalQuestions, questionIndex, onSubmit }) {
               </Widget.Topic>
             );
           })}
+          <Button type="submit">
+            Confirmar
+          </Button>
         </form>
-        <Button type="submit">
-          Confirmar
-        </Button>
       </Widget.Content>
     </Widget>
   );
