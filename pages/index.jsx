@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
 import db from '../db.json';
@@ -50,7 +49,22 @@ export default function Home() {
         <Widget>
           <Widget.Content>
             <h1>Quiz da Galera</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <ul>
+              {db.external.map((externalLink) => {
+                const [projectName, gitHubUser] = externalLink
+                  .replace('https://', '')
+                  .replace('.vercel.app/', '')
+                  .split('.');
+
+                return (
+                  <li key={externalLink}>
+                    <Widget.Topic href={externalLink}>
+                      {`${gitHubUser}/${projectName}`}
+                    </Widget.Topic>
+                  </li>
+                );
+              })}
+            </ul>
           </Widget.Content>
         </Widget>
         <Footer />

@@ -4,25 +4,68 @@
   "description": "Mostre seu conhecimento sobre o agente mais famoso do mundo.",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
+      "image": "https://i.pinimg.com/originals/9d/8a/bd/9d8abd1b13b289298ba0623db54bfaa6.gif",
+      "title": "Qual o nome verdadeiro do 007?",
+      "description": "O agente é famoso pelo seu nome, como ele é chamado?",
       "answer": 2,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Jaime Bond",
+        "Jey Bond",
+        "James Bond",
+        "Jacky Bond",
+        "Jimmy Bond"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://www.eon.co.uk/wp-content/uploads/2017/11/007-Logo-1480x1020-Gallery-White.png",
+      "title": "O que significa o código 00?",
+      "description": "007 é um código que possui um significado especial na agência.",
+      "answer": 1,
+      "alternatives": [
+        "Permissão para execução de missões secretas",
+        "Permissão para matar sem autorização",
+        "Permissão para contatos especiais do governo",
+        "Permissão para porte de arma pesada",
+        "Permissão para acesso à tecnologia avançada"
+      ]
+    },
+    {
+      "image": "https://i.ytimg.com/vi/SuV05toJoiM/maxresdefault.jpg",
+      "title": "Qual a origin do agente 007?",
+      "description": "O agente possui filmes, livros, jogos e quadrinhos. Mas qual foi sua origem?",
+      "answer": 2,
+      "alternatives": [
+        "Filme (1962) dirigido por Terence Young",
+        "Quadrinho (1958) lançado por Britânicos",
+        "Livro (1953) escrito por Ian Fleming",
+        "Jogo (1983) no Atari, ColecoVision e Commodore 64",
+        "Música (1963) chamada de 'From Russia with Love'"
+      ]
+    },
+    {
+      "image": "https://64.media.tumblr.com/b341d122fca3b669be8476b53cc19a72/tumblr_o8j9yxvQdX1sqf5tdo1_400.gif",
+      "title": "O carro-anfíbio utilizado no filme existe?",
+      "description": "Os gadgets tecnológicos do agente são muito conhecidos, um deles é o carro utilizado em um dos filmes.",
+      "answer": 4,
+      "alternatives": [
+        "Não, produzido com computação gráfica",
+        "Sim, produzido pela Lotus exclusivamente para o filme",
+        "Sim, mas não foi colocado debaixo d'água",
+        "Não, eram truques de câmera",
+        "Sim, um modelo real preparado para aparecer debaixo d'água"
+      ]
+    },
+    {
+      "image": "https://thumbs.gfycat.com/BreakableRealArabianoryx-size_restricted.gif",
+      "title": "Quantos filmes foram produzidos oficialmente (até 2020)?",
+      "description": "Diversos títulos no cinema já foram produzidos na franquia 007, apesar de algumas trocas de atores interpretando o agente.",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+        "24",
+        "28",
+        "17",
+        "12",
+        "32"
       ]
     }
   ],
