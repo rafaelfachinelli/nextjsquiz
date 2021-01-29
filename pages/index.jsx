@@ -58,7 +58,7 @@ export default function Home() {
 
                 return (
                   <li key={externalLink}>
-                    <Widget.Topic href={externalLink}>
+                    <Widget.Topic href={externalLink} target="_blank">
                       {`${gitHubUser}/${projectName}`}
                     </Widget.Topic>
                   </li>
@@ -69,7 +69,7 @@ export default function Home() {
         </Widget>
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/rafaelfachinelli/nextjsquiz" />
+      <GitHubCorner projectUrl="https://github.com/rafaelfachinelli/nextjsquiz" target="_blank" />
     </QuizBackground>
   );
 }
