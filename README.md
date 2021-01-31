@@ -1,10 +1,3 @@
-<div align="right">
-  
-  [![English](https://www.countryflags.io/us/flat/32.png)](README.md)
-  [![Portuguese](https://www.countryflags.io/br/flat/32.png)](README-PT.md)
-  
-</div>
-
 <p align="center">
   <img alt="PROJECT NAME" src=".github/banner.svg" width="250px"/>
 </p>
