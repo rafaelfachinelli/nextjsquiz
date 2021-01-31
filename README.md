@@ -96,7 +96,7 @@ Open the command prompt in the project directory, open the [`example/`](example/
 
 </details>
 
-> ⚠️ The development server will start on port:PORT - Access <http://localhost:PORT>
+> ⚠️ The development server will start on port:3000 - Access <http://localhost:3000>
 
 ---
 ## :hammer_and_wrench: **Technologies**
