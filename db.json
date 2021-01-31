@@ -72,8 +72,7 @@
   "external": [
     "https://star-wars-quiz.wfelipe2011.vercel.app/",
     "https://mr-robot-quiz-alura.bryanauta.vercel.app",
-    "https://sotc-quiz.lucianowribeiro.vercel.app",
-    "https://alura-pokemon-quiz.daniloamsilva.vercel.app"
+    "https://sotc-quiz.lucianowribeiro.vercel.app"
   ],
   "theme": {
     "colors": {
