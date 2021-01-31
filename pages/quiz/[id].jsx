@@ -5,7 +5,6 @@ import { ThemeProvider } from 'styled-components';
 import QuizScreen from '../../src/screens/Quiz';
 
 export default function QuizDaGaleraPage({ externalDBQuiz }) {
-  console.log(externalDBQuiz);
   return (
     <ThemeProvider theme={externalDBQuiz.theme}>
       <QuizScreen externalDBQuiz={externalDBQuiz} />
