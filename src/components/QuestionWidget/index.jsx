@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Lottie from 'react-lottie';
+import { motion } from 'framer-motion';
 
 import Widget from '../Widget';
 import Button from '../Button';
@@ -46,7 +47,7 @@ export default function QuestionWidget({
         </h3>
       </Widget.Header>
 
-      <img
+      <motion.img
         alt="Descrição"
         style={{
           width: '100%',
@@ -54,14 +55,71 @@ export default function QuestionWidget({
           objectFit: 'cover',
         }}
         src={question.image}
+        animate={isQuestionSubmited ? 'hidden' : 'visible'}
+        initial="hidden"
+        variants={{
+          visible: {
+            x: '0',
+            transition: {
+              duration: 0.2,
+            },
+          },
+          hidden: {
+            x: '100%',
+            transition: {
+              delay: 0.5,
+              duration: 0.2,
+            },
+          },
+        }}
       />
       <Widget.Content>
-        <h2>
+        <motion.h2
+          animate={isQuestionSubmited ? 'hidden' : 'visible'}
+          initial="hidden"
+          variants={{
+            visible: {
+              x: '0',
+              opacity: 1,
+              transition: {
+                duration: 0.2,
+              },
+            },
+            hidden: {
+              x: '100%',
+              opacity: 0,
+              transition: {
+                delay: 0.5,
+                duration: 0.2,
+              },
+            },
+          }}
+        >
           {question.title}
-        </h2>
-        <p>
+        </motion.h2>
+        <motion.p
+          animate={isQuestionSubmited ? 'hidden' : 'visible'}
+          initial="hidden"
+          variants={{
+            visible: {
+              x: '0',
+              opacity: 1,
+              transition: {
+                duration: 0.2,
+              },
+            },
+            hidden: {
+              x: '100%',
+              opacity: 0,
+              transition: {
+                delay: 0.5,
+                duration: 0.2,
+              },
+            },
+          }}
+        >
           {question.description}
-        </p>
+        </motion.p>
 
         <AlternativesForm
           onSubmit={(event) => {
@@ -72,7 +130,7 @@ export default function QuestionWidget({
               onSubmit();
               setIsQuestionSubmit(false);
               setSelectedAlternative(undefined);
-            }, 3 * 1000);
+            }, 2 * 1000);
           }}
         >
           {question.alternatives.map((alternative, index) => {
@@ -81,11 +139,30 @@ export default function QuestionWidget({
             const isSelected = selectedAlternative === index;
             return (
               <Widget.Topic
-                as="label"
+                as={motion.label}
                 key={alternativeId}
                 htmlFor={alternativeId}
                 data-selected={isSelected}
                 data-status={isQuestionSubmited && alternativeStatus}
+                animate={isQuestionSubmited ? 'hidden' : 'visible'}
+                custom={index}
+                variants={{
+                  visible: (i) => ({
+                    x: '0',
+                    opacity: 1,
+                    transition: {
+                      delay: (i + 0.5) * 0.2,
+                    },
+                  }),
+                  hidden: (i) => ({
+                    x: '100%',
+                    opacity: 0,
+                    transition: {
+                      delay: (i + 3) * 0.1,
+                      duration: 0.5,
+                    },
+                  }),
+                }}
               >
                 <input
                   style={{ display: 'none' }}
