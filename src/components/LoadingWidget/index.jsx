@@ -19,7 +19,7 @@ export default function LoadingWidget() {
   return (
     <Widget>
       <Widget.Header>
-        Carregando...
+        <h1>Carregando... se prepare!</h1>
       </Widget.Header>
 
       <Widget.Content>
