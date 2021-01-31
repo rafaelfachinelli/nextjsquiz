@@ -106,9 +106,9 @@ The following tools is used to build this project:
 
 <div align="center">
 
-|:globe_with_meridians: Web|:iphone: Mobile|:file_cabinet: Server|
-|:---:|:---:|:---:|
-|[Example](https://example.com)|[Example](https://example.com)|[Example](https://example.com)|
+|:globe_with_meridians: Web|
+|:---:|
+|[Example](https://example.com)|
 
 </div>
 
