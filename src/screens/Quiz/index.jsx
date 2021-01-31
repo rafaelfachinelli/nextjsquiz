@@ -32,7 +32,7 @@ export default function QuizPage({ externalDBQuiz }) {
   React.useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
-    }, 1 * 700);
+    }, 1 * 1000);
   }, []);
 
   function handleSubmitQuiz() {

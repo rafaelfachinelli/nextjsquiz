@@ -12,7 +12,7 @@ import QuizBackground from '../src/components/QuizBackground';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
-import Link from '../src/components/Link';
+import GalleyWidget from '../src/components/GalleyWidget';
 
 export default function Home() {
   const router = useRouter();
@@ -57,45 +57,8 @@ export default function Home() {
           </Widget.Content>
         </Widget>
 
-        <Widget
-          as={motion.section}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          variants={{
-            show: { opacity: 1 },
-            hidden: { opacity: 0 },
-          }}
-          initial="hidden"
-          animate="show"
-        >
-          <Widget.Content>
-            <h1>Quiz da Galera</h1>
-            <ul>
-              {db.external.map((externalLink) => {
-                const [projectName, gitHubUser] = externalLink
-                  .replace('https://', '')
-                  .replace('.vercel.app/', '')
-                  .split('.');
+        <GalleyWidget playerName={name} />
 
-                return (
-                  <li key={externalLink}>
-                    <Widget.Topic
-                      as={Link}
-                      href={name.length !== 0 ? `/quiz/${projectName}___${gitHubUser}?name=${name}` : ''}
-                      data-disabled={name.length === 0}
-                      title={
-                        name.length !== 0
-                          ? `Jogar este quiz como ${name}.`
-                          : 'Você precisa digitar um nome para poder jogar.'
-                      }
-                    >
-                      {`${gitHubUser}/${projectName}`}
-                    </Widget.Topic>
-                  </li>
-                );
-              })}
-            </ul>
-          </Widget.Content>
-        </Widget>
         <Footer
           as={motion.footer}
           transition={{ delay: 1, duration: 0.5 }}
