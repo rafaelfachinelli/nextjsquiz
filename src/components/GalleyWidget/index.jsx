@@ -23,6 +23,7 @@ export default function GalleyWidget({ playerName }) {
         <h1>Quiz da Galera</h1>
       </Widget.Header>
       <Widget.Content>
+        <p>Visite outros quizzes de temas variados para testar os seus conhecimentos!</p>
         <ul>
           {db.external.map((externalLink) => {
             const [projectName, gitHubUser] = externalLink
