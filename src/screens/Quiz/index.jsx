@@ -31,9 +31,11 @@ export default function QuizPage({ externalDBQuiz }) {
 
   React.useEffect(() => {
     setTimeout(() => {
+      setCurrentQuestion(0);
+      setResults([]);
       setScreenState(screenStates.QUIZ);
     }, 1 * 1000);
-  }, []);
+  }, [externalDBQuiz]);
 
   function handleSubmitQuiz() {
     const nextQuestion = questionIndex + 1;
