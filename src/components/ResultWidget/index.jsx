@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import Widget from '../Widget';
 import ResultItem from './ResultItem';
 import GalleyWidget from '../GalleyWidget';
+import Button from '../Button';
 
 export default function ResultWidget({ results }) {
   const router = useRouter();
@@ -40,6 +41,8 @@ export default function ResultWidget({ results }) {
               <ResultItem key={`result__${result}`} result={result} index={index} />
             ))}
           </ul>
+
+          <Button onClick={() => { router.push('/'); }}>Voltar</Button>
         </Widget.Content>
 
       </Widget>
