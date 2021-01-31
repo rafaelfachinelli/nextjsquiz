@@ -1,78 +1,338 @@
-# Example app with styled-components
+<div align="right">
+  
+  [![English](https://www.countryflags.io/us/flat/32.png)](README.md)
+  [![Portuguese](https://www.countryflags.io/br/flat/32.png)](README-PT.md)
+  
+</div>
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
+<p align="center">
+  <img alt="PROJECT NAME" src=".github/banner.svg" width="250px"/>
+</p>
 
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
+<p align="center"> 
+  <img alt="Repository Size" src="https://img.shields.io/github/repo-size/rafaelfachinelli/dev-readme?color=3498db&style=for-the-badge">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/rafaelfachinelli/dev-readme?color=3498db&style=for-the-badge">
+  <a href="https://github.com/USERNAME">
+    <img alt="Developed by NAME" src="https://img.shields.io/badge/Developer-NAME_SURNAME-%3498db?color=3498db&style=for-the-badge">
+  </a>
+  <img alt="Project License" src="https://img.shields.io/github/license/rafaelfachinelli/dev-readme?color=3498db&style=for-the-badge"/>
+</p>
 
-## Deploy your own
+<p align="center">
+ <a href="#eye_speech_bubble-preview">Preview</a> •
+ <a href="#information_source-about">About</a> •
+ <a href="#memo-tasks">Tasks</a> •
+ <a href="#arrow_forward-run">Run</a> •
+ <a href="#hammer_and_wrench-technologies">Technologies</a> •
+ <a href="#muscle-contributors">Contributors</a> •
+ <a href="#boy-author">Author</a> •
+ <a href="#balance_scale-license">License</a>
+</p>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+---
+## :eye_speech_bubble: **Preview**
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+<div align="center">
 
-## How to use
+### :desktop_computer: Computer
+  
+|Desktop|Ultra Wide|
+|:---:|:---:|
+|<kbd><img src=".github/previews/desktop_preview.jpg" alt="Desktop"/></kbd>|<kbd><img src=".github/previews/ultraWide_preview.jpg" alt="Ultra Wide"/></kbd>|
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+### :iphone: Responsive
 
-```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
-```
+|Tablet|Mobile|
+|:---:|:---:|
+|<kbd><img src=".github/previews/tablet_preview.jpg" alt="Tablet"/></kbd>|<kbd><img src=".github/previews/mobile_preview.jpg" alt="Mobile"/></kbd>
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+</div>
+  
+---
+## :information_source: About
 
-### Try it on CodeSandbox
+Description about this project.
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+---
+## :memo: **Tasks**
 
-### Notes
-
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
-
+<div align="center">
 <details>
-<summary>Click to expand workaround example</summary>
-<br />
+<summary>Click to View</summary>
 
-**components/StyledLink.js**
-
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
-
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
-
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: #40a9ff;
-  }
-
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
-```
-
-**pages/index.js**
-
-```javascript
-import StyledLink from '../components/StyledLink'
-
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
-```
+|State|Task|
+|:---:|:---|
+|:heavy_check_mark:|Describe your task finished.|
+|:x:|Describe your task unfinished.|
 
 </details>
+</div>
+
+---
+## :arrow_forward: **Run**
+
+To run the project you need to download this repository, have the Node Package Manager ([`NPM`](https://www.npmjs.com/get-npm)) or the YARN Package Manager installed ([`YARN`](https://yarnpkg.com/getting-started)).
+
+### :globe_with_meridians: **Web**
+
+Open the command prompt in the project directory, open the [`example/`](example/) folder and execute the following commands:
+
+<details>
+  <summary><i>with <b>npm</b></i></summary>
+  
+  ```bash
+  # Install dependencies
+  $ npm install
+
+  # Start development server
+  $ npm start
+  ```
+  
+</details>
+
+<details>
+  <summary><i>with <b>yarn</b></i></summary>
+  
+  ```bash
+  # Install dependencies
+  $ yarn
+
+  # Start development server
+  $ yarn start
+
+  ```
+
+</details>
+
+> ⚠️ The development server will start on port:PORT - Access <http://localhost:PORT>
+
+### :iphone: **Mobile**
+
+Open the command prompt in the project directory, open the [`example/`](example/) folder and execute the following commands:
+
+<details>
+  <summary><i>with <b>npm</b></i></summary>
+  
+  ```bash
+  # Install dependencies
+  $ npm install
+
+  # Start development server
+  $ npm start
+  ```
+  
+</details>
+
+<details>
+  <summary><i>with <b>yarn</b></i></summary>
+  
+  ```bash
+  # Install dependencies
+  $ yarn
+
+  # Start development server
+  $ yarn start
+
+  ```
+
+</details>
+
+> ⚠️ The development server will start on port:PORT - Access <http://localhost:PORT>
+
+### :file_cabinet: **Server**
+
+Open the command prompt in the project directory, open the [`example/`](example/) folder and execute the following commands:
+
+<details>
+  <summary><i>with <b>npm</b></i></summary>
+  
+  ```bash
+  # Install dependencies
+  $ npm install
+
+  # Start development server
+  $ npm start
+  ```
+  
+</details>
+
+<details>
+  <summary><i>with <b>yarn</b></i></summary>
+  
+  ```bash
+  # Install dependencies
+  $ yarn
+
+  # Start development server
+  $ yarn start
+
+  ```
+
+</details>
+
+<details>
+<summary>:dizzy: <b>API Routes</b></summary>
+
+<details>
+<summary>[POST] <b>Create OBJECT</b></summary>
+/api/create/OBJECT
+</details>
+
+<details>
+<summary>[PUT] <b>Update OBJECT</b></summary>
+/api/update/OBJECT/:id
+</details>
+
+<details>
+<summary>[GET] <b>Get OBJECT</b></summary>
+/api/view/OBJECT/:id
+</details>
+  
+<details>
+<summary>[GET] <b>Get All OBJECTS</b></summary>
+/api/view/OBJECTS
+</details>
+
+<details>
+<summary>[DEL] <b>Delete User</b></summary>
+/api/delete/OBJECT/:id
+</details>
+
+<details>
+<summary>[DEL] <b>Delete All OBJECTS</b></summary>
+/api/delete/OBJECTS
+</details>
+
+</details>
+
+> ⚠️ The development server will start on port:PORT - Access <http://localhost:PORT>
+
+---
+## :hammer_and_wrench: **Technologies**
+
+The following tools is used to build this project:
+
+<div align="center">
+
+|:globe_with_meridians: Web|:iphone: Mobile|:file_cabinet: Server|
+|:---:|:---:|:---:|
+|[Example](https://example.com)|[Example](https://example.com)|[Example](https://example.com)|
+
+</div>
+
+---
+## :muscle: **Contributors**
+
+Thanks to all these wonderful people:
+
+<div align="center">
+
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://PORTFOLIOURL.COM">
+        <img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;" alt="Image Profile NAME CONTRIBUTOR"/><br />
+        <sub><b>Contributor Name</b></sub>
+      </a>
+      <br/>
+      <a href="https://www.linkedin.com/in/CONTRIBUTORNAME" title="LinkedIn"><img src="https://simpleicons.org/icons/linkedin.svg" width="20px"/></a>
+      <a href="https://github.com/CONTRIBUTORNAME" title="GitHub"><img src="https://simpleicons.org/icons/github.svg" width="20px"/></a>
+      <a href="https://www.facebook.com/CONTRIBUTORNAME" title="Facebook"><img src="https://simpleicons.org/icons/facebook.svg" width="20px"/></a>
+      <a href="https://www.youtube.com/CANALNAME" title="YouTube"><img src="https://simpleicons.org/icons/youtube.svg" width="20px"/></a>
+    </td>
+    <td align="center">
+      <a href="https://PORTFOLIOURL.COM">
+        <img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;" alt="Image Profile NAME CONTRIBUTOR"/><br />
+        <sub><b>Contributor Name</b></sub>
+      </a>
+      <br/>
+      <a href="https://www.linkedin.com/in/CONTRIBUTORNAME" title="LinkedIn"><img src="https://simpleicons.org/icons/linkedin.svg" width="20px"/></a>
+      <a href="https://github.com/CONTRIBUTORNAME" title="GitHub"><img src="https://simpleicons.org/icons/github.svg" width="20px"/></a>
+      <a href="https://www.facebook.com/CONTRIBUTORNAME" title="Facebook"><img src="https://simpleicons.org/icons/facebook.svg" width="20px"/></a>
+      <a href="https://www.youtube.com/CANALNAME" title="YouTube"><img src="https://simpleicons.org/icons/youtube.svg" width="20px"/></a>
+    </td>
+    <td align="center">
+      <a href="https://PORTFOLIOURL.COM">
+        <img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;" alt="Image Profile NAME CONTRIBUTOR"/><br />
+        <sub><b>Contributor Name</b></sub>
+      </a>
+      <br/>
+      <a href="https://www.linkedin.com/in/CONTRIBUTORNAME" title="LinkedIn"><img src="https://simpleicons.org/icons/linkedin.svg" width="20px"/></a>
+      <a href="https://github.com/CONTRIBUTORNAME" title="GitHub"><img src="https://simpleicons.org/icons/github.svg" width="20px"/></a>
+      <a href="https://www.facebook.com/CONTRIBUTORNAME" title="Facebook"><img src="https://simpleicons.org/icons/facebook.svg" width="20px"/></a>
+      <a href="https://www.youtube.com/CANALNAME" title="YouTube"><img src="https://simpleicons.org/icons/youtube.svg" width="20px"/></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <a href="https://PORTFOLIOURL.COM">
+        <img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;" alt="Image Profile NAME CONTRIBUTOR"/><br />
+        <sub><b>Contributor Name</b></sub>
+      </a>
+      <br/>
+      <a href="https://www.linkedin.com/in/CONTRIBUTORNAME" title="LinkedIn"><img src="https://simpleicons.org/icons/linkedin.svg" width="20px"/></a>
+      <a href="https://github.com/CONTRIBUTORNAME" title="GitHub"><img src="https://simpleicons.org/icons/github.svg" width="20px"/></a>
+      <a href="https://www.facebook.com/CONTRIBUTORNAME" title="Facebook"><img src="https://simpleicons.org/icons/facebook.svg" width="20px"/></a>
+      <a href="https://www.youtube.com/CANALNAME" title="YouTube"><img src="https://simpleicons.org/icons/youtube.svg" width="20px"/></a>
+    </td>
+    <td align="center">
+      <a href="https://PORTFOLIOURL.COM">
+        <img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;" alt="Image Profile NAME CONTRIBUTOR"/><br />
+        <sub><b>Contributor Name</b></sub>
+      </a>
+      <br/>
+      <a href="https://www.linkedin.com/in/CONTRIBUTORNAME" title="LinkedIn"><img src="https://simpleicons.org/icons/linkedin.svg" width="20px"/></a>
+      <a href="https://github.com/CONTRIBUTORNAME" title="GitHub"><img src="https://simpleicons.org/icons/github.svg" width="20px"/></a>
+      <a href="https://www.facebook.com/CONTRIBUTORNAME" title="Facebook"><img src="https://simpleicons.org/icons/facebook.svg" width="20px"/></a>
+      <a href="https://www.youtube.com/CANALNAME" title="YouTube"><img src="https://simpleicons.org/icons/youtube.svg" width="20px"/></a>
+    </td>
+    <td align="center">
+      <a href="https://PORTFOLIOURL.COM">
+        <img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;" alt="Image Profile NAME CONTRIBUTOR"/><br />
+        <sub><b>Contributor Name</b></sub>
+      </a>
+      <br/>
+      <a href="https://www.linkedin.com/in/CONTRIBUTORNAME" title="LinkedIn"><img src="https://simpleicons.org/icons/linkedin.svg" width="20px"/></a>
+      <a href="https://github.com/CONTRIBUTORNAME" title="GitHub"><img src="https://simpleicons.org/icons/github.svg" width="20px"/></a>
+      <a href="https://www.facebook.com/CONTRIBUTORNAME" title="Facebook"><img src="https://simpleicons.org/icons/facebook.svg" width="20px"/></a>
+      <a href="https://www.youtube.com/CANALNAME" title="YouTube"><img src="https://simpleicons.org/icons/youtube.svg" width="20px"/></a>
+    </td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+</div>
+
+---
+## :boy: **Author**
+
+<div align="center">
+
+<a href="https://github.com/AUTHORUSERNAME">
+ <img src="https://avatars1.githubusercontent.com/u/9919?s=200&v=4" width="100px;" alt="Profile Photo AUTHOR NAME"/>
+ <br/>
+ <sub><b>AUTHOR NAME</b></sub>
+</a>
+
+Developed with ❤️ by AUTHOR NAME 👋🏽 Contact me!
+
+[![Linkedin Badge](https://img.shields.io/badge/-AUTHOR_NAME-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/AUTHORNAME)
+[![Github Badge](https://img.shields.io/badge/-AUTHORNAME-000?style=flat-square&logo=Github&logoColor=white)](https://github.com/AUTHORUSERNAME)
+[![Outlook Badge](https://img.shields.io/badge/-AUTHOREMAIL-0078d4?style=flat-square&logo=microsoft-outlook&logoColor=white)](mailto:AUTHOREMAIL)
+
+</div>
+
+---
+## :balance_scale: **License**
+
+<div align="center">
+
+Copyright © 2021 [NAME](https://github.com/USERNAME).<br />
+This project is licensed by [MIT](./LICENSE).
+
+</div>
