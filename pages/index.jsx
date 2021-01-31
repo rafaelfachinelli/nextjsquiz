@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
 import db from '../db.json';
 
@@ -21,7 +22,16 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
         <QuizLogo />
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Header>
             <h1>007: Quiz</h1>
           </Widget.Header>
@@ -29,7 +39,7 @@ export default function Home() {
             <form onSubmit={
               (e) => {
                 e.preventDefault();
-                router.push(`/quiz?name=${name}`);
+                router.push(`/quiz/nextjsquiz___rafaelfachinelli?name=${name}`);
               }
             }
             >
@@ -47,7 +57,16 @@ export default function Home() {
           </Widget.Content>
         </Widget>
 
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Content>
             <h1>Quiz da Galera</h1>
             <ul>
@@ -61,7 +80,13 @@ export default function Home() {
                   <li key={externalLink}>
                     <Widget.Topic
                       as={Link}
-                      href={`/quiz/${projectName}___${gitHubUser}`}
+                      href={name.length !== 0 ? `/quiz/${projectName}___${gitHubUser}?name=${name}` : ''}
+                      data-disabled={name.length === 0}
+                      title={
+                        name.length !== 0
+                          ? `Jogar este quiz como ${name}.`
+                          : 'Você precisa digitar um nome para poder jogar.'
+                      }
                     >
                       {`${gitHubUser}/${projectName}`}
                     </Widget.Topic>
@@ -71,7 +96,16 @@ export default function Home() {
             </ul>
           </Widget.Content>
         </Widget>
-        <Footer />
+        <Footer
+          as={motion.footer}
+          transition={{ delay: 1, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          initial="hidden"
+          animate="show"
+        />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/rafaelfachinelli/nextjsquiz" target="_blank" />
     </QuizBackground>
