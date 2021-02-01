@@ -42,7 +42,9 @@
 ---
 ## :information_source: About
 
-Description about this project.
+Quiz about agent 007, developed at the event promoted by [`Alura`](https://www.alura.com.br) and supported by [`Vercel`](https://vercel.com).
+
+Week to develop a complete application using resources from React and Next.js. 
 
 ---
 ## :arrow_forward: **Run**
