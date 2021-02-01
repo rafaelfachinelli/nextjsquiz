@@ -63,11 +63,11 @@ Description about this project.
 ---
 ## :arrow_forward: **Run**
 
-To run the project you need to download this repository, have the Node Package Manager ([`NPM`](https://www.npmjs.com/get-npm)) or the YARN Package Manager installed ([`YARN`](https://yarnpkg.com/getting-started)).
+To run the project you need to clone or [`download`](archive/main.zip) this repository, have the Node Package Manager ([`NPM`](https://www.npmjs.com/get-npm)) or the YARN Package Manager installed ([`YARN`](https://yarnpkg.com/getting-started)).
 
 ### :globe_with_meridians: **Web**
 
-Open the command prompt in the project directory, open the [`example/`](example/) folder and execute the following commands:
+Open the command prompt in the project directory and execute the following commands:
 
 <details>
   <summary><i>with <b>npm</b></i></summary>
