@@ -14,7 +14,6 @@
 <p align="center">
  <a href="#eye_speech_bubble-preview">Preview</a> •
  <a href="#information_source-about">About</a> •
- <a href="#memo-tasks">Tasks</a> •
  <a href="#arrow_forward-run">Run</a> •
  <a href="#hammer_and_wrench-technologies">Technologies</a> •
  <a href="#boy-author">Author</a> •
@@ -28,15 +27,15 @@
 
 ### :desktop_computer: Computer
   
-|Desktop|Ultra Wide|
-|:---:|:---:|
-|<kbd><img src=".github/previews/desktop_preview.jpg" alt="Desktop"/></kbd>|<kbd><img src=".github/previews/ultraWide_preview.jpg" alt="Ultra Wide"/></kbd>|
+|Desktop|
+|:---:|
+|<kbd><img src=".github/previews/desktop_preview.gif" alt="Desktop"/></kbd>|
 
 ### :iphone: Responsive
 
-|Tablet|Mobile|
-|:---:|:---:|
-|<kbd><img src=".github/previews/tablet_preview.jpg" alt="Tablet"/></kbd>|<kbd><img src=".github/previews/mobile_preview.jpg" alt="Mobile"/></kbd>
+|Mobile|
+|:---:|
+|<kbd><img src=".github/previews/mobile_preview.gif" alt="Mobile"/></kbd>
 
 </div>
   
@@ -44,21 +43,6 @@
 ## :information_source: About
 
 Description about this project.
-
----
-## :memo: **Tasks**
-
-<div align="center">
-<details>
-<summary>Click to View</summary>
-
-|State|Task|
-|:---:|:---|
-|:heavy_check_mark:|Describe your task finished.|
-|:x:|Describe your task unfinished.|
-
-</details>
-</div>
 
 ---
 ## :arrow_forward: **Run**
