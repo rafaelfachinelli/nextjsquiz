@@ -7,6 +7,7 @@ import QuizContainer from '../../components/QuizContainer';
 import LoadingWidget from '../../components/LoadingWidget';
 import QuestionWidget from '../../components/QuestionWidget';
 import ResultWidget from '../../components/ResultWidget';
+import Link from '../../components/Link';
 
 const screenStates = {
   QUIZ: 'QUIZ',
@@ -52,7 +53,9 @@ export default function QuizPage({ externalDBQuiz }) {
   return (
     <QuizBackground backgroundImage={externalDBQuiz.bg}>
       <QuizContainer>
-        <QuizLogo />
+        <Link href="/">
+          <QuizLogo />
+        </Link>
         {screenState === screenStates.QUIZ && (
           <QuestionWidget
             question={question}

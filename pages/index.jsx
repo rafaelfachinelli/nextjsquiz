@@ -13,6 +13,7 @@ import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
 import GalleyWidget from '../src/components/GalleyWidget';
+import Link from '../src/components/Link';
 
 export default function Home() {
   const router = useRouter();
@@ -21,7 +22,9 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
-        <QuizLogo />
+        <Link href="/">
+          <QuizLogo />
+        </Link>
         <Widget
           as={motion.section}
           transition={{ delay: 0, duration: 0.5 }}
