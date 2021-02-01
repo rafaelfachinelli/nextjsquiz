@@ -63,7 +63,7 @@ Description about this project.
 ---
 ## :arrow_forward: **Run**
 
-To run the project you need to clone or [`download`](archive/main.zip) this repository, have the Node Package Manager ([`NPM`](https://www.npmjs.com/get-npm)) or the YARN Package Manager installed ([`YARN`](https://yarnpkg.com/getting-started)).
+To run the project you need to clone or [`download`](https://github.com/rafaelfachinelli/nextjsquiz/archive/main.zip) this repository, have the Node Package Manager ([`NPM`](https://www.npmjs.com/get-npm)) or the YARN Package Manager installed ([`YARN`](https://yarnpkg.com/getting-started)).
 
 ### :globe_with_meridians: **Web**
 
