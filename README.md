@@ -107,7 +107,17 @@ The following tools is used to build this project:
 
 |:globe_with_meridians: Web|
 |:---:|
-|[Example](https://example.com)|
+|[HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML/HTML5)|
+|[CSS3](https://www.w3schools.com/css/)|
+|[JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)|
+|[React](https://reactjs.org)|
+|[React Lottie](https://www.npmjs.com/package/react-lottie)|
+|[Lottie](https://lottiefiles.com)|
+|[Next.js](https://nextjs.org)|
+|[Styled Components](https://styled-components.com)|
+|[Prop Types](https://www.npmjs.com/package/prop-types)|
+|[Framer Motion](https://www.framer.com/motion/)|
+|[ESLint](https://eslint.org)|
 
 </div>
 
